@@ -1,0 +1,86 @@
+# macOS system files (recursively)
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+**/.Spotlight-V100
+**/.Trashes
+**/._*
+**/Icon
+**/.fseventsd
+**/.com.apple.timemachine.donotpresent
+**/.com.apple.TimeMachine.*
+
+# Swap/temp files
+**/*.swp
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*.so
+**/*.egg
+**/*.egg-info/
+**/*.pyd
+**/*.pyo
+
+# Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
+
+# Virtual environments
+**/venv/
+**/env/
+**/ENV/
+**/.venv/
+**/.pipenv/
+**/.python-version
+
+# VSCode / PyCharm
+**/.vscode/
+**/.idea/
+
+# Logs
+**/*.log
+
+# Data and output files
+**/*.csv
+**/*.tsv
+**/*.zip
+**/*.gz
+**/*.tar
+**/*.h5
+**/*.hdf5
+**/*.npz
+**/*.npy
+**/*.pkl
+**/*.joblib
+
+# Model weights and checkpoints
+**/*.ckpt
+**/*.pt
+**/*.pth
+**/*.tflite
+**/*.onnx
+**/*.pb
+**/checkpoint/
+**/checkpoint-*/
+
+# TensorBoard
+**/logs/
+**/runs/
+
+# Spyder
+**/.spyderproject
+**/.spyproject
+
+# Colab artifacts
+**/*.ipynb_save
+
+# Misc
+**/*.tmp
+**/*.bak
+**/.cache/
+**/*.cache
+
+# Windows
+**/Desktop.ini
+**/Thumbs.db
+**/ehthumbs.db
