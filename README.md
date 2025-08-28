@@ -16,31 +16,95 @@ We use the **open-source property listings dataset** provided by **AirROI**:
 
 ## 🧾 Dataset: `Listings Data` Schema
 
-Below is the schema of the **Dubai Property Listings** dataset from AirROI:
+## 🧾 Dataset Schema: Dubai Property Listings (AirROI)
 
-| Column Name             | Description                                                      |
-|-------------------------|------------------------------------------------------------------|
-| `id`                   | Unique listing identifier                                         |
-| `scraped_at`           | Timestamp when data was collected                                |
-| `title`                | Short title or summary of the listing                            |
-| `description`          | Long text with property details                                  |
-| `price`                | Price of the property (in AED)                                   |
-| `bedrooms`             | Number of bedrooms                                               |
-| `bathrooms`            | Number of bathrooms                                              |
-| `area`                 | Size of the property in square feet                              |
-| `location`             | Area / community name (e.g., Business Bay, Dubai Marina, etc.)   |
-| `latitude`             | Geo coordinate (optional for spatial filtering)                  |
-| `longitude`            | Geo coordinate (optional for spatial filtering)                  |
-| `property_type`        | Apartment, villa, townhouse, etc.                                |
-| `amenities`            | Text list of features (e.g., gym, pool, parking)                 |
-| `developer`            | Name of developer (if available)                                 |
-| `status`               | Availability (e.g., ready, off-plan, under construction)         |
-| `furnishing`           | Furnishing status (e.g., furnished, semi-furnished, unfurnished) |
-| `completion_status`    | Completed, Off-plan, etc.                                        |
-| `image_url`            | Representative image                                             |
-| `listing_url`          | External link to full property page                              |
-| `source`               | Portal where it was listed (e.g., Bayut, PropertyFinder, etc.)   |
+Below is the full schema of the open-source real estate listings dataset from [AirROI - Dubai Market](https://www.airroi.com/data-portal/markets/dubai-united-arab-emirates).
 
+| Field Name                      | Type              | Description |
+|--------------------------------|-------------------|-------------|
+| `listing_id`                   | long              | Unique identifier for the listing |
+| `listing_name`                 | string            | Title of the listing |
+| `listing_type`                 | string            | Type of property (e.g., apartment, house, villa) |
+| `room_type`                    | string            | Type of room (e.g., entire home, private room) |
+| `cover_photo_url`             | string            | URL of the main listing photo |
+| `photos_count`                | integer           | Number of photos available for the listing |
+| `host_id`                     | long              | Unique identifier for the host |
+| `host_name`                   | string            | Name of the host |
+| `cohost_ids`                  | string            | IDs of co-hosts associated with the listing |
+| `cohost_names`                | string            | Names of co-hosts associated with the listing |
+| `superhost`                   | boolean           | Whether the host is a superhost |
+| `country`                     | string            | Country where the listing is located |
+| `state`                       | string            | State or province |
+| `city`                        | string            | City name |
+| `latitude`                    | decimal(10,4)     | Latitude coordinate |
+| `longitude`                   | decimal(10,4)     | Longitude coordinate |
+| `guests`                      | integer           | Maximum number of guests allowed |
+| `bedrooms`                    | integer           | Number of bedrooms |
+| `beds`                        | integer           | Number of beds |
+| `baths`                       | decimal(4,1)      | Number of bathrooms |
+| `registration`                | boolean           | Listing has registration number |
+| `amenities`                   | string            | List of amenities (as text) |
+| `instant_book`                | boolean           | Whether it can be booked instantly |
+| `min_nights`                  | integer           | Minimum nights to book |
+| `cancellation_policy`         | string            | Type of cancellation policy |
+| `currency`                    | string            | Currency used for pricing |
+| `cleaning_fee`                | integer           | Cleaning fee (if any) |
+| `extra_guest_fee`             | integer           | Additional guest fee |
+| `num_reviews`                 | integer           | Total number of reviews |
+| `rating_overall`              | double            | Overall rating |
+| `rating_accuracy`             | double            | Accuracy rating |
+| `rating_checkin`              | double            | Check-in experience rating |
+| `rating_cleanliness`          | double            | Cleanliness rating |
+| `rating_communication`        | double            | Host communication rating |
+| `rating_location`             | double            | Location rating |
+| `rating_value`                | double            | Value-for-money rating |
+
+### 📊 Trailing 12-Months (TTM) Metrics
+
+| Field Name                      | Type              | Description |
+|--------------------------------|-------------------|-------------|
+| `ttm_revenue`                  | double            | Total revenue (12 months) |
+| `ttm_revenue_native`          | double            | Revenue in native currency |
+| `ttm_avg_rate`                | double            | Average daily rate |
+| `ttm_avg_rate_native`        | double            | In native currency |
+| `ttm_occupancy`              | double            | Occupancy rate |
+| `ttm_adjusted_occupancy`     | double            | Excludes owner-blocked days |
+| `ttm_revpar`                 | double            | Revenue per available room |
+| `ttm_revpar_native`          | double            | In native currency |
+| `ttm_adjusted_revpar`        | double            | Adjusted RevPAR |
+| `ttm_adjusted_revpar_native`| double            | In native currency |
+| `ttm_reserved_days`          | long              | Reserved/booked days |
+| `ttm_blocked_days`           | long              | Host-blocked days |
+| `ttm_available_days`         | long              | Available days |
+| `ttm_total_days`             | long              | Total listing days in year |
+
+### 📊 Last 90-Days (L90D) Metrics
+
+| Field Name                      | Type              | Description |
+|--------------------------------|-------------------|-------------|
+| `l90d_revenue`                | double            | Revenue in last 90 days |
+| `l90d_revenue_native`        | double            | Native currency |
+| `l90d_avg_rate`              | double            | Avg. daily rate |
+| `l90d_avg_rate_native`      | double            | In native currency |
+| `l90d_occupancy`            | double            | Occupancy rate |
+| `l90d_adjusted_occupancy`   | double            | Excludes blocked days |
+| `l90d_revpar`               | double            | Revenue per available room |
+| `l90d_revpar_native`        | double            | In native currency |
+| `l90d_adjusted_revpar`      | double            | Adjusted RevPAR |
+| `l90d_adjusted_revpar_native`| double           | In native currency |
+| `l90d_reserved_days`        | long              | Days reserved |
+| `l90d_blocked_days`         | long              | Host-blocked days |
+| `l90d_available_days`       | long              | Days available |
+| `l90d_total_days`           | long              | Total considered days |
+
+---
+
+> This schema supports a wide range of use cases including:  
+> - **Location-based filtering**  
+> - **Price and occupancy analytics**  
+> - **Amenity search and semantic matching**  
+> - **Recommender systems based on past reviews and performance**  
+> - **Revenue prediction and financial modeling**
 ---
 
 ## 🔍 Project Overview
