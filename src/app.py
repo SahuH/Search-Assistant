@@ -1,10 +1,10 @@
 import streamlit as st
 from retrieve import retrieve_with_metadata_filtering, rerank_candidates
 
-st.set_page_config(page_title="Real Estate Search Assistant", page_icon="🏠")
+st.set_page_config(page_title="Your AirBnB Property Finder", page_icon="🏠")
 
 # Title
-st.title("🏠 Real Estate Search Assistant")
+st.title("🏠 Your AirBnB Property Finder")
 st.markdown("Ask me to find you properties in Dubai based on your preferences!")
 
 # Initialize chat history

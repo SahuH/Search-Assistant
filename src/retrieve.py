@@ -93,13 +93,13 @@ def rerank_candidates(query: str, metadata_results: dict, top_k: int = 5):
 
 
 
-query = "Looking for a 3-bedroom place that can accommodate at least 6 guests, with 2 bathrooms."
-metadata_results = retrieve_with_metadata_filtering(query)
-top_properties = rerank_candidates(query, metadata_results, top_k=5)
+# query = "Looking for a 3-bedroom place that can accommodate at least 6 guests, with 2 bathrooms."
+# metadata_results = retrieve_with_metadata_filtering(query)
+# top_properties = rerank_candidates(query, metadata_results, top_k=5)
 
-for i, prop in enumerate(top_properties):
-    print(f"\n🏠 Property #{i+1}")
-    print(f"Text: {prop['property_text']}")
-    print(f"Score: {prop['score']:.4f}")
-    print(f"Metadata: {prop['metadata']}")
-    print(f"ID: {prop['id']}")
+# for i, prop in enumerate(top_properties):
+#     print(f"\n🏠 Property #{i+1}")
+#     print(f"Text: {prop['property_text']}")
+#     print(f"Score: {prop['score']:.4f}")
+#     print(f"Metadata: {prop['metadata']}")
+#     print(f"ID: {prop['id']}")
