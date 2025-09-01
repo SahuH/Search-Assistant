@@ -1,0 +1,39 @@
+🔢 Guest Capacity, Bedrooms, Beds, Baths
+
+“Looking for a 3-bedroom place that can accommodate at least 6 guests, with 2 bathrooms.”
+
+“Need an apartment with 4 beds and at least 1.5 bathrooms for our family trip.”
+
+“Show me listings suitable for 10+ guests with 5 or more beds.”
+
+“A cozy studio with at least 1 bath and 2 beds would work.”
+
+💤 Minimum Nights Stay
+
+“I’m looking for a short stay, max 2 nights.”
+
+“Only show listings that require at least 7 nights minimum.”
+
+⭐ Ratings and Reviews
+
+“Only show highly rated properties (4.8+ rating) with at least 50 reviews.”
+
+“Looking for a hidden gem — even fewer reviews are fine, but rating must be over 4.9.”
+
+“Find listings with over 100 reviews and a minimum 4.5 star rating.”
+
+💰 Price (Average Daily Rate)
+
+“Find listings under 500 AED per night.”
+
+“Budget is 1500–2000 AED per night — nothing more.”
+
+“Looking for premium stays above 2500 AED per night.”
+
+📊 Multi-condition Queries
+
+“I need a 2BHK with 2 bathrooms for 4 guests, over 4.7 rating, and under 800 AED/night.”
+
+“Best deals for 6+ guests with 3+ bedrooms and at least 4.5 overall rating.”
+
+“Looking for an apartment for 2 guests with high rating (4.9+), minimal reviews required, and max budget 400 AED per night.”

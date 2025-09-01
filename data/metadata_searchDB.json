@@ -1,0 +1,63 @@
+{
+    "guests": [
+        "guest",
+        "guests",
+        "accommodates",
+        "number of guests",
+        "people allowed"
+    ],
+    "bedrooms": [
+        "bedroom",
+        "bedrooms",
+        "no. of bedrooms",
+        "how many bedrooms",
+        "sleeping rooms"
+    ],
+    "beds": [
+        "of",
+        "bedss",
+        "available",
+        "number",
+        "beds"
+    ],
+    "baths": [
+        "of",
+        "available",
+        "bathrooms",
+        "number",
+        "baths",
+        "bathss"
+    ],
+    "min_nights": [
+        "of",
+        "min nightss",
+        "minimum",
+        "number",
+        "min nights",
+        "nights",
+        "book",
+        "required",
+        "to"
+    ],
+    "num_reviews": [
+        "reviews",
+        "no. of reviews",
+        "feedback",
+        "ratings count"
+    ],
+    "rating_overall": [
+        "rating",
+        "overall rating",
+        "review score",
+        "average rating",
+        "stars"
+    ],
+    "ttm_avg_rate": [
+        "price",
+        "budget",
+        "rate",
+        "cost per night",
+        "nightly price",
+        "daily rate"
+    ]
+}

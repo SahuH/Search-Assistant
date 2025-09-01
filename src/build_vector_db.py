@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 DB_URI = "postgresql://admin:admin@localhost:5432/airbnbdb"
 TABLE_NAME = "airbnb_properties"
-CHROMA_DIR = "./chroma_store"
+CHROMA_DIR = "../data/chroma_store"
 COLLECTION_NAME = "airbnb_properties"
 
 RELEVANT_ATTRIBUTES = [
@@ -20,7 +20,7 @@ RELEVANT_ATTRIBUTES = [
 ]
 
 METADATA_ATTRIBUTES = [
-'guests', 'bedrooms', 'beds', 'baths', 'num_reviews',  'rating_overall', 'min_nights', 'ttm_avg_rate'
+'guests', 'bedrooms', 'beds', 'baths', 'num_reviews', 'rating_overall', 'min_nights', 'ttm_avg_rate'
 ]
 
 # -----------------------------
@@ -85,6 +85,7 @@ df["property_card"] = df.apply(generate_property_card, axis=1)
 # EMBEDDING
 # -----------------------------
 print("🔄 Generating embeddings...")
+
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 embeddings = model.encode(df["property_card"].tolist(), show_progress_bar=True)
 
