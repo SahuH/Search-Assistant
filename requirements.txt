@@ -6,4 +6,3 @@ SQLAlchemy==2.0.25
 streamlit==1.49.1
 torch==2.8.0
 tqdm==4.67.1
-sqlite3==3.35.0
