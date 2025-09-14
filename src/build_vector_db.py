@@ -93,7 +93,13 @@ embeddings = model.encode(df["property_card"].tolist(), show_progress_bar=True)
 # SAVE TO CHROMADB
 # -----------------------------
 print("💾 Saving to ChromaDB...")
-chroma_client = chromadb.PersistentClient(path=CHROMA_DIR)
+# chroma_client = chromadb.PersistentClient(path=CHROMA_DIR)
+chroma_client = chromadb.Client(
+    Settings(
+        chroma_db_impl="duckdb+parquet",
+        persist_directory=CHROMA_DIR  # this will use local files
+    )
+)
 collection = chroma_client.get_or_create_collection(COLLECTION_NAME)
 
 documents = df["property_card"].tolist()
