@@ -1,9 +1,11 @@
+import os
 import json
 import chromadb
 from chromadb.config import Settings
 
 # Load synonym mapping
-with open("../data/metadata_searchDB.json", "r") as f:
+BASE_DIR = os.path.dirname(__file__)
+with open(os.path.join(BASE_DIR, "../data/metadata_searchDB.json", "r")) as f:
     synonym_mapping = json.load(f)
 
 # Reverse lookup for synonyms
